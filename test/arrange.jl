@@ -14,7 +14,7 @@ SQL.arrange(DefaultArrangement, STDOUT, u[*](:where => and(u.id == 1, u.name == 
 function SQL.arrange(io::IO, query::Queryable)
     write(io, QueryBuilders.colored_repr(query), "\n")
     for row in SQL.iterate(query)
-        write(io, string(map(x -> isa(x, Nullable) ? x.value : x, row)))
+        write(io, string(map(x -> isa(x, Nullable) ? x.value : x, row), "\n"))
     end
 end
 

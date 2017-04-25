@@ -19,7 +19,10 @@ import .QueryBuilders: Create, Alter, Drop, Database, Table, Column, Index, Fore
 export                 Queryable, arrange
 import .QueryBuilders: Queryable, arrange
 
-include("forked/MySQL.jl")
+import MySQL
+# temporary forked for Julia 0.6
+# include("forked/MySQL.jl/src/MySQL.jl")
+
 include("sql.jl")
 
 export  SQL, table_from, DefaultArrangement
