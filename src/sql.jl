@@ -3,7 +3,7 @@ module SQL
 using Compat
 
 import ..MySQL: MySQLHandle, MySQLInternalError, MySQLRowIterator, MYSQL_TUPLES, MYSQL_OPT_RECONNECT
-import ..MySQL: mysql_connect, mysql_stmt_prepare, mysql_metadata, mysql_execute
+import ..MySQL: mysql_connect, mysql_disconnect, mysql_stmt_prepare, mysql_metadata, mysql_execute
 
 import Octo
 import .Octo: QueryBuilders
